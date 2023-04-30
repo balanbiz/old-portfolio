@@ -1,0 +1,164 @@
+@media(max-width: 1152px) {
+    .aboutme .price {
+        grid-template-columns: 100%;
+    }
+
+    .main-img-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutme .main-img {
+        height: 80%;
+    }
+
+    /* .aboutme .price__item {
+        grid-template-columns: 300px 100px 100px;
+    } */
+}
+
+@media(max-width: 991px) {
+    .aboutme {
+        &__why {
+            ul {
+                margin: 0 1em;
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .aboutme {
+        .main-img {
+            height: 60%;
+        }
+    }
+}
+
+@media(max-width: 724px) {
+    .aboutme {
+        .main-img-wrap {
+            grid-column: 1/3;
+        }
+
+        .main-img {
+            height: 100%;
+        }
+
+        &__general {
+            grid-column: 1/3;
+        }
+    }
+}
+
+@media(max-width: 655px) {
+    .aboutme {
+        .price__item {
+            grid-template-columns: 200px 150px 150px;
+        }
+
+        .price__main_wrapper {
+            font-size: 0.9em;
+        }
+    }
+}
+
+@media(max-width: 566px) {
+    .aboutme {
+        .price__item {
+            grid-template-columns: 170px 120px 120px;
+        }
+
+        .price__main_wrapper {
+            font-size: 0.9em;
+        }
+    }
+}
+
+@media(max-width: 470px) {
+    .aboutme {
+        .price__item {
+            grid-template-columns: 185px 90px 90px;
+            padding: 0 0;
+        }
+
+        .price__main_wrapper {
+            font-size: 0.8em;
+        }
+
+        li {
+            list-style: none;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #5f9ea0;
+        }
+    }
+}
+
+@media(max-width: 420px) {
+    .aboutme {
+        .title_fz14.promo__descr {
+            font-size: 1.1em;
+        }
+
+        &__why {
+            h3 {
+                margin-top: 0;
+            }
+        }
+
+        &__spheres {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .price__item {
+            grid-template-columns: 120px 77px 77px;
+            padding: 0 0;
+        }
+
+        .price__main_wrapper {
+            font-size: 0.7em;
+        }
+    }
+}
+
+@media(max-width: 320px) {
+    .aboutme {
+        margin-top: 40px;
+
+        h2 {
+            font-size: 2em;
+        }
+
+        &__general {
+            padding: 10px;
+        }
+
+        &__why {
+            text-align: center;
+
+            li {
+                list-style: none;
+                padding-bottom: 16px;
+                border-bottom: 2px solid cadetblue;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .main_steps {
+            h3 {
+                margin: 0;
+            }
+        }
+
+        &__spheres {
+            margin-top: 10px;
+        }
+
+
+    }
+}

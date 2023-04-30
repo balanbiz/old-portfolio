@@ -1,0 +1,49 @@
+@media(max-width: 798px) {
+
+    .presentation,
+    .presentation header {
+        padding: 40px;
+
+        .text {
+            h2 {
+                font-size: 3em;
+            }
+
+            h3 {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+@media(max-width: 493px) {
+
+    .presentation,
+    .presentation header {
+        padding: 5px;
+
+        .logo {
+            font-size: 27px;
+            text-transform: none;
+        }
+
+        .text {
+            h2 {
+                font-size: 33px;
+            }
+
+            h3 {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media(min-width: 381px) {
+    .menu {
+        .toggle {
+            display: none !important;
+        }
+    }
+
+}

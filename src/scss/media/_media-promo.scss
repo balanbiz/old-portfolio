@@ -1,0 +1,179 @@
+@media (max-width: 1200px) {}
+
+@media (max-width: 991px) {
+    @keyframes slides {
+        0% {
+            background: url('../img/992/promo-bg/sky1.jpg') center (center / cover) no-repeat;
+        }
+
+        30% {
+            background: url('../img/992/promo-bg/sky2.jpg') center (center / cover) no-repeat;
+        }
+
+        50% {
+            background: url('../img/992/promo-bg/sky2.5.jpg') center (center / cover) no-repeat;
+
+        }
+
+        70% {
+            background: url('../img/992/promo-bg/sky3.jpg') center (center / cover) no-repeat;
+
+        }
+
+        100% {
+            background: url('../img/992/promo-bg/sky4.jpg') center (center / cover) no-repeat;
+
+        }
+    }
+
+    #load {
+        background: url('../img/992/promo-bg/sky1.jpg') center (center / cover) no-repeat;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .promo {
+        padding-top: 15vh;
+    }
+}
+
+@media (max-width: 767px) {
+    @keyframes slides {
+        0% {
+            background: url('../img/768/promo-bg/sky1.jpg') center (center / cover) no-repeat;
+        }
+
+        30% {
+            background: url('../img/768/promo-bg/sky2.jpg') center (center / cover) no-repeat;
+        }
+
+        50% {
+            background: url('../img/768/promo-bg/sky2.5.jpg') center (center / cover) no-repeat;
+
+        }
+
+        70% {
+            background: url('../img/768/promo-bg/sky3.jpg') center (center / cover) no-repeat;
+
+        }
+
+        100% {
+            background: url('../img/768/promo-bg/sky4.jpg') center (center / cover) no-repeat;
+
+        }
+    }
+
+    #load {
+        background: url('../img/768/promo-bg/sky1.jpg') center (center / cover) no-repeat;
+    }
+
+    .promo {
+        padding-top: 4vh;
+
+        &__wrapper {
+            width: 528px;
+
+        }
+
+        &__h2 {
+            row-gap: 30px;
+
+            span {
+                transform: translateY(1000%);
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .promo {
+        &__wrapper {
+            width: 340px;
+        }
+
+        &__h2 {
+            font-size: 30px;
+            row-gap: 10px;
+        }
+
+        &__h1 {
+            h1 {
+                font-size: 26px
+            }
+
+            &::before {
+                top: -5px;
+                left: -2px;
+            }
+
+            &::after {
+                bottom: -5px;
+                right: -4px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    @keyframes slides {
+        0% {
+            background: url('../img/425/promo-bg/sky1.jpg') center (center / cover) no-repeat;
+        }
+
+        30% {
+            background: url('../img/425/promo-bg/sky2.jpg') center (center / cover) no-repeat;
+        }
+
+        50% {
+            background: url('../img/425/promo-bg/sky2.5.jpg') center (center / cover) no-repeat;
+
+        }
+
+        70% {
+            background: url('../img/425/promo-bg/sky3.jpg') center (center / cover) no-repeat;
+
+        }
+
+        100% {
+            background: url('../img/425/promo-bg/sky4.jpg') center (center / cover) no-repeat;
+
+        }
+    }
+
+    #load {
+        background: url('../img/425/promo-bg/sky1.jpg') center (center / cover) no-repeat;
+    }
+}
+
+@media (max-width: 374px) {
+    .promo {
+        &__wrapper {
+            width: 290px;
+        }
+
+        &__h2 {
+            font-size: 30px;
+            row-gap: 10px;
+        }
+
+        &__h1 {
+            margin-top: 20px;
+
+            &::before {
+                top: -5px;
+                left: -2px;
+            }
+
+            &::after {
+                bottom: -5px;
+                right: -4px;
+            }
+
+            h1 {
+                font-size: 24px
+            }
+        }
+    }
+}

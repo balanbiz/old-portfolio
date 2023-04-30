@@ -1,0 +1,316 @@
+/* .parallax,
+.content {
+    background-color: #000;
+    color: white;
+} */
+
+.parallax {
+    min-height: 100vh;
+    background-color: white;
+    color: white;
+    /* border-bottom: 1vh #266150 solid; */
+    position: relative;
+
+    .fixed {
+        position: fixed;
+    }
+
+
+    &__body {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        /* display: flex;
+        align-items: center; */
+    }
+
+    &__container {
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        /* transform: translateY(-20%); */
+    }
+
+    &__label {
+        margin-top: 2em;
+        color: #266150;
+        display: flex;
+        font-size: 50px;
+        letter-spacing: 6px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        line-height: 1.6;
+        align-items: center;
+        text-shadow: 1px 1px 1px white;
+        background-color: rgba(255, 255, 255, 0.424);
+        border: 2px solid white;
+
+        /* &::before {
+            flex: 0 0 80px;
+            content: '';
+            margin-top: 30px;
+            background-color: cadetblue;
+            height: 3px;
+        } */
+    }
+
+    &__title {
+        color: #266150;
+        display: flex;
+        font-size: 55px;
+        letter-spacing: 6px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        line-height: 1.5;
+        align-items: center;
+        text-shadow: 2px 2px 1px white;
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 2px solid white;
+    }
+
+    &__search {
+        display: flex;
+        justify-content: start;
+        margin-bottom: 2px;
+
+        &_input {
+            width: 100%;
+            border: 2px solid #266150;
+            padding-left: 20px;
+            font-size: 18px;
+            color: black;
+
+            &:focus {
+                outline: none;
+                border: 2px white solid;
+            }
+
+            &::placeholder {
+                font-size: 18px;
+                color: black;
+            }
+        }
+
+        &_icon {
+            transition: 0.3s all;
+            width: 100px;
+            height: 50px;
+            background-color: #266150;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+
+
+
+            &:hover {
+                border: white 2px solid;
+            }
+
+            svg {
+                width: 100%;
+                height: 80%;
+                transition: 0.3s all;
+
+                &:hover {
+                    fill: black;
+                }
+            }
+
+        }
+    }
+
+    &__images {
+        position: absolute;
+        width: 130%;
+        height: 130%;
+        top: -15%;
+        left: -15%;
+        z-index: 1;
+    }
+
+    .images-parallax {
+
+        .images-parallax__item {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        &__house,
+        &__trees,
+        &__grass {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+        }
+
+        &__trees {
+            background: url('/img/1400/parallax/parallax_layer_3.png') top / cover no-repeat;
+            height: 100%;
+            width: 100%;
+            /* top: -3%;
+            left: -2%; */
+        }
+
+        &__house {
+            background: url('/img/1400/parallax/parallax_layer_2.png') top / cover no-repeat;
+            width: 125%;
+            height: 125%;
+            top: -14%;
+            left: -7%;
+            z-index: 2;
+        }
+
+        &__grass {
+            background: url('/img/1400/parallax/parallax_layer_1.png') top / cover no-repeat;
+
+            z-index: 3;
+
+        }
+    }
+}
+
+._container {
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.content {
+    background-color: #266150;
+    border-top: 2px #266150 solid;
+    position: relative;
+    color: white;
+    z-index: 2;
+    text-align: center;
+
+
+
+    .opacity {
+        opacity: 0;
+    }
+
+    /* &__container {
+        padding: 80px 20px;
+        transform: translateY(-50%);
+    } */
+
+    &__divider {
+        display: block;
+        margin: 10px auto 20px auto;
+        height: 2px;
+        background-color: #fff;
+        width: 30%;
+        max-width: 100%;
+    }
+
+    &::before {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        transform: translate(0, -100%);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 36%, #266150 93%);
+    }
+
+    &__title {
+        font-size: 35px;
+        margin-bottom: 30px;
+
+    }
+
+    .paragraf {}
+
+    &__youtube {
+        width: 100vh;
+        height: 56.25vh;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+
+    }
+
+    .play__icon {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+
+        svg {
+            cursor: pointer;
+            transition: 0.5s all;
+
+            &:hover {
+                transform: scale(1.2);
+                filter: drop-shadow(0 0 15px #fff) brightness(90%);
+            }
+        }
+    }
+
+    &__modal_overlay {
+        position: fixed;
+        top: 0;
+        display: none;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        animation: fading-bgr 1s ease-in-out forwards;
+        z-index: 5000;
+    }
+
+    &__modal_window {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        height: 80%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        z-index: 11;
+        animation: manifest 1s ease-in-out forwards;
+
+
+        .close {
+            font-size: 42px;
+            margin-bottom: 0.6em;
+            cursor: pointer;
+
+            &:hover {
+                color: #266150;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 19px;
+        line-height: 150%;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+}

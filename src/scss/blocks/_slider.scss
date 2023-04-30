@@ -1,0 +1,355 @@
+.slider {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+    color: white;
+    text-shadow: 2px 2px 5px red;
+    line-height: 1.2;
+    z-index: 22;
+
+    &__h3 {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .container {
+        height: 100%;
+        display: inline-flex;
+        transform: translateX(0);
+        transition: transform 0.3s ease-out;
+        cursor: grab;
+    }
+
+    &__item {
+        overflow: hidden;
+        max-height: 100%;
+        min-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        padding: 1em;
+
+        .good {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 1rem;
+        }
+
+        .price {
+            position: relative;
+            font-size: 1.3rem;
+            margin: 1.5rem 1rem 1rem 1rem;
+            transform: translateX(-15%);
+
+            &-old {
+                font-size: 1.7rem;
+                color: grey;
+                text-shadow: none;
+                text-decoration: line-through;
+            }
+
+            &-new {
+                animation: pulse 4s 2s infinite linear;
+                position: absolute;
+                right: -20px;
+                top: -20px;
+            }
+        }
+
+        picture {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            object-fit: cover;
+        }
+
+        .preview {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+            margin: 1rem;
+            object-fit: cover;
+        }
+
+        .countdown {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+            row-gap: 20px;
+
+            &__wrap {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 10px;
+            }
+        }
+    }
+
+    /* &__image_wrap {
+        height: 100%;
+        width: 100%;
+        background-color: #80808045;
+        background: url('/img/icons/spin_gif.gif') center / 50px no-repeat;
+    } */
+
+    &__btn {
+        border: 2px dashed $main-color;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        margin: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .grabbing {
+        cursor: grabbing;
+    }
+
+    .grabbing .slider__item img {
+        transform: scale(0.9);
+    }
+
+    .swipe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: swipe 3s linear infinite;
+
+        img {
+            margin: 0 10px;
+            max-height: 100%;
+        }
+
+        &__help {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1rem;
+
+
+        }
+    }
+
+    .cback {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        right: -15px;
+        bottom: -15px;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .cback-circle {
+        width: 100%;
+        height: 100%;
+        border: 1px solid;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        background: #131313;
+        color: #9a4545;
+    }
+
+    .cback-circle--phone {
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .cback-circle {
+        &.fn1 {
+            animation: pin 2.5s linear .4s infinite normal;
+        }
+
+        &.fn2 {
+            animation: pin 2s linear 0s infinite normal;
+            background: none;
+        }
+    }
+
+    .cback {
+        &:hover .cback-circle--phone {
+            -webkit-animation: hvr-phone 2s linear infinite normal;
+            animation: hvr-phone 2s linear infinite normal;
+        }
+
+        .phone-icon {
+            width: 41px;
+            height: 41px;
+            background: url(https://brrenat.github.io/content/phone.png);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: phone-fn 5s infinite ease-in-out;
+        }
+    }
+
+
+    //modal callback for phone icon
+
+    &__modal_overlay {
+        position: fixed;
+        top: 0;
+        display: none;
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        /* background-color: rgba(0, 0, 0, 0.9); */
+
+        .modal__phone,
+        .modal__buynow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 80%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #32323252;
+
+
+            &_close {
+                font-size: 40px;
+                width: 45px;
+                height: 45px;
+                position: absolute;
+                right: -12px;
+                top: -15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+
+        .modal__phone_form,
+        .modal__buynow_form {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            .modal__input {
+                position: relative;
+                width: 100%;
+                height: 40px;
+                margin: 18px 0;
+
+                input {
+                    display: block;
+                    margin: 0 auto;
+                    width: 85%;
+                    height: 45px;
+                    font-size: 18px;
+                    border: 2px dashed rgba(255, 132, 132, .380392);
+                    background-color: black;
+                    color: white;
+                    text-shadow: 1px 1px 2px rgb(0, 172, 29);
+                    padding: 0 10px;
+
+                }
+
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus,
+                input:-webkit-autofill:active {
+                    -webkit-box-shadow: 0 0 0 30px rgb(0, 0, 0) inset !important;
+                }
+
+                input:-webkit-autofill {
+                    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+                    outline: 2px dashed rgba(255, 132, 132, .380392);
+                    border: none;
+                }
+
+                input:focus {
+                    border: none;
+                    outline: 2px dashed white;
+                    background-color: #000;
+                }
+
+                ::placeholder {
+                    color: rgba(128, 128, 128, 0.637);
+                    text-shadow: none
+                }
+            }
+
+            label {
+                position: absolute;
+                display: block;
+                left: 15px;
+                top: -10px;
+                height: 18px;
+                padding: 0 12px;
+                background-color: black;
+            }
+        }
+
+        .modal__btn {
+            border: 2px dashed $main-color;
+            background-color: #000;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            text-shadow: 1px 1px 2px red;
+            font-size: 14px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: 0.5s all;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        .modal__policy {
+            text-align: center;
+            margin: 10px 0 22px 0;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    .swipe {
+        margin: 5px 0;
+    }
+
+    .phone__manifest,
+    .buynow__manifest {
+        animation: manifest 1s ease-in-out forwards;
+    }
+
+    .slider__fading-bgr {
+        animation: fading-bgr 1s ease-in-out forwards;
+    }
+
+}

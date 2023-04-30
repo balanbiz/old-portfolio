@@ -1,0 +1,174 @@
+.webp #load {
+    background: url(../img/1400/promo-bg/sky1.webp) center center/cover no-repeat;
+}
+
+.webp .service {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.6))), url(/img/1400/service/service-back.webp) center center/cover no-repeat;
+}
+
+.webp .service {
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/1400/service/service-back.webp) center center/cover no-repeat;
+}
+
+.webp .service {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/1400/service/service-back.webp) center center/cover no-repeat;
+}
+
+.webp .parallax .images-parallax__trees {
+    background: url(/img/1400/parallax/parallax_layer_3.webp) top/cover no-repeat;
+}
+
+.webp .parallax .images-parallax__house {
+    background: url(/img/1400/parallax/parallax_layer_2.webp) top/cover no-repeat;
+}
+
+.webp .parallax .images-parallax__grass {
+    background: url(/img/1400/parallax/parallax_layer_1.webp) top/cover no-repeat;
+}
+
+@media (max-width: 992px) {
+
+    .webp .parallax .images-parallax__house {
+        background-image: url(/img/992/parallax/parallax_layer_2.webp);
+    }
+}
+
+@media (max-width: 992px) {
+
+    .webp .parallax .images-parallax__trees {
+        background-image: url(/img/992/parallax/parallax_layer_3.webp);
+    }
+}
+
+@media (max-width: 992px) {
+
+    .webp .parallax .images-parallax__grass {
+        background-image: url(/img/992/parallax/parallax_layer_1.webp);
+    }
+}
+
+@media (max-width: 991px) {
+
+    .webp #load {
+        background: url(../img/992/promo-bg/sky1.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .webp .service {
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.6))), url(/img/992/service/service-back.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .webp .service {
+        background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/992/service/service-back.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .webp .service {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/992/service/service-back.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .webp .parallax .images-parallax__house {
+        background-image: url(/img/768/parallax/parallax_layer_2.webp);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .webp .parallax .images-parallax__trees {
+        background-image: url(/img/768/parallax/parallax_layer_3.webp);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .webp .parallax .images-parallax__grass {
+        background-image: url(/img/768/parallax/parallax_layer_1.webp);
+    }
+}
+
+@media (max-width: 767px) {
+
+    .webp #load {
+        background: url(../img/768/promo-bg/sky1.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .webp .service {
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.6))), url(/img/768/service/service-back.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .webp .service {
+        background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/768/service/service-back.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .webp .service {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/768/service/service-back.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .webp #load {
+        background: url(../img/425/promo-bg/sky1.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .webp .service {
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.6))), url(/img/425/service/service-back.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .webp .service {
+        background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/425/service/service-back.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .webp .service {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(/img/425/service/service-back.webp) center center/cover no-repeat;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .webp .parallax .images-parallax__house {
+        background-image: url(/img/425/parallax/parallax_layer_2.webp);
+    }
+}
+
+@media (max-width: 425px) {
+
+    .webp .parallax .images-parallax__trees {
+        background-image: url(/img/425/parallax/parallax_layer_3.webp);
+    }
+}
+
+@media (max-width: 425px) {
+
+    .webp .parallax .images-parallax__grass {
+        background-image: url(/img/425/parallax/parallax_layer_1.webp);
+    }
+}

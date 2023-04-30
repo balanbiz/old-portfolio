@@ -1,0 +1,115 @@
+@media (max-width: 1070px) {
+    .service {
+        &__wrapper {
+            grid-template-columns: repeat(2, 350px);
+            padding-top: 100px;
+            position: relative;
+
+            &_malfunctions-left {
+                .camera-media {
+                    display: block;
+                    position: absolute;
+                    top: -80px;
+                    right: 26px;
+                }
+
+                .camera-media::before {
+                    content: '';
+                    width: 227px;
+                    height: 3px;
+                    position: absolute;
+                    top: 42px;
+                    right: -235px;
+                    background-color: #fff;
+                }
+
+                .camera-media::after {
+                    content: '';
+                    width: 3px;
+                    height: 68px;
+                    position: absolute;
+                    top: 42px;
+                    right: -237px;
+                    background-color: #fff;
+                }
+            }
+
+            &_malfunctions-right {
+                display: none;
+            }
+        }
+
+
+    }
+}
+
+@media (max-width: 991px) {
+    .service {
+        background: linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.6)), url('/img/992/service/service-back.jpg') center (center / cover) no-repeat;
+    }
+}
+
+@media (max-width: 767px) {
+    .service {
+        background: linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.6)), url('/img/768/service/service-back.jpg') center (center / cover) no-repeat;
+    }
+}
+
+@media (max-width: 720px) {
+    .service {
+        &__wrapper {
+            grid-template-columns: 350px;
+            padding-top: 15px;
+
+            .service__wrapper_malfunctions-left {
+                display: none;
+            }
+
+            .service__wrapper_center-mobile {
+                display: block;
+                /* position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%); */
+            }
+        }
+
+    }
+}
+
+@media (max-width: 425px) {
+    .service {
+        background: linear-gradient(rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.6)), url('/img/425/service/service-back.jpg') center (center / cover) no-repeat;
+    }
+}
+
+@media (max-width: 420px) {
+    .service {
+        h3 {
+            font-size: 34px
+        }
+
+        &__wrapper {
+            grid-template-columns: 100%;
+
+            textarea {
+                width: 100%;
+            }
+        }
+
+        &__wrapper_endform {
+            input {
+                width: 90%;
+            }
+        }
+
+        .malfunction {
+            span {
+                font-size: 35px
+            }
+        }
+    }
+}
